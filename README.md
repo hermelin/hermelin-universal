@@ -31,7 +31,7 @@ If you don't care about the following and just want to install or update the gtk
 wrappers, you can use(or modify) [this](https://gist.github.com/fliiiix/8146460) buildscript.
 It has to be executable and in the Hermelin directory which you get via:
 
-    $ git clone https://github.com/remhume/Hermelin.git
+    $ git clone https://github.com/Hermelin/hermelin-universal.git
 
 Before you are able to build, you need to fetch the [Hermelin](https://github.com/hermelin/hermelin)-core which is now located in another repository:
 
