@@ -1,36 +1,8 @@
-# Hermelin
-Hermelin is a fork of [Hotot](https://github.com/lyricat/Hotot), the "Lightweight, Flexible Microblogging Client" supporting Twitter at this point of development. (identi.ca and similar may be readded later)
+# Hermelin - Universal
 
-I forked Hotot for the reason that it won't get any bigger updates here in the future because the developer stated that the [future updates of hotot won't be opensource & free](https://d34d.de/?p=160).
+This repository is a set of build chains for different desktop wrappers written in Gtk, Qt and the Chrome webkit wrapper. Down below you'll find the dependencies and build instructions to get the clients up and running.
 
-I think it is sad that there aren't much [free](https://www.gnu.org/philosophy/free-sw.html) Twitter Clients, so i don't want Hotot to die.
-
-##Installing the Chrome/Chromium Version:
-
-
-To install Hermelin in chrome or chromium, simply install it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/hermelin-twitter-client/jkajhbbfjgkbjeldopihmjfcaebjgobg). 
-
-To load the newest commit you have to:
-
-* Download this git repo (via the git clone command on linux or the downloadable zip file).
-* Go to Chrome/Chromiums Extensions page and activate developer mode (top right corner).
-* Click "Load unpacked extension…" and choose the data/ directory from the repo.
-
-It is not possible to update the Web Store Extension with this method.
-
-For that you'd have to:
-
-* Download this git repo (via the git clone command on linux or the downloadable zip file).
-* Copy everything ***except manifest.json*** from the data/ directory into the Web Store extensions directory.
-
-The folder where Chrome/Chromium extensions are stored differs from OS to OS - In there should be the folder jkajhbbfjgkbjeldopihmjfcaebjgobg/ in which you'll find the folder with the newest version.
-
-The files from the data/ directory go in this folder.
-
-## Building from source:
-Since Hermelins core is largely based on HTML5, JavaScript and Webkit technology, it can be run under many Webkit implementations. Hermelin officially supports Gtk, Qt, and Chrome webkit wrapper.
-
-###Dependencies:
+## Dependencies:
 
 Common Requirements:
 * cmake
@@ -54,14 +26,17 @@ Gtk3 Wrapper:
 On Ubuntu 11.10 all of these resources are available in the standard repositories:
     # apt-get install libqt4-dev cmake intltool
 
-###Build:
+## Build:
 If you don't care about the following and just want to install or update the gtk
 wrappers, you can use(or modify) [this](https://gist.github.com/fliiiix/8146460) buildscript.
 It has to be executable and in the Hermelin directory which you get via:
 
     $ git clone https://github.com/remhume/Hermelin.git
 
+Before you are able to build, you need to fetch the [Hermelin](https://github.com/hermelin/hermelin)-core which is now located in another repository:
 
+    $ git submodule init
+    $ git submodule update
 
 The standard process for building from source is:
 
